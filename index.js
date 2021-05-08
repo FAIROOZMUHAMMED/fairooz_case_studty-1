@@ -47,11 +47,11 @@ function ajax(){
            if(count==5){
              resolve("You have completed 5 task succesfully");
            } 
-          })
+          });
           promise.then(function(value){
              alert(value);
-          })
-         })
+          });
+         });
 xhttp.open("GET","https://jsonplaceholder.typicode.com/todos",true);
 xhttp.send();
 }
