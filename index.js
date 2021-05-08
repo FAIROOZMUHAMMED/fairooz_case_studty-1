@@ -37,7 +37,7 @@ function ajax(){
          tableData += `<tr><td class="tbln"><input type="checkbox"  ${chkchk(currentData.completed)} value=${currentData.title}>${currentData.title}</td></tr>`
     }
       document.getElementById("myTable").innerHTML=tableData;
-     }
+     };
      };  
      function chkchk(val){
 console.log(val)  ;
