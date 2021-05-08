@@ -41,7 +41,7 @@ function ajax(){
      };  
      function chkchk(val){
 console.log(val)  ;
-if(val==true){return "disabled"} else {return null ;}
+if(val){return "disabled"} else {return null ;}
 }
     var count =0;
      $('body').on('change','input[type=checkbox]',function(e){
