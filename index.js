@@ -39,6 +39,19 @@ function ajax(){
       document.getElementById("myTable").innerHTML=tableData;
       }
      };  
+    var count =0;
+     $('body').on('change','input[type=checkbox]',function(e){
+         console.log("check box is checked");
+         var count = $("[type='checkbox']:checked").length;
+         var promise= new Promise(function(resolve) {
+           if(count==5){
+             resolve("You have completed 5 task succesfully");
+           } 
+          })
+          promise.then(function(value){
+             alert(value);
+          })
+         })
 xhttp.open("GET","https://jsonplaceholder.typicode.com/todos",true);
 xhttp.send();
 }
