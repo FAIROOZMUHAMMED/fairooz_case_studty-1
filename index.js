@@ -34,12 +34,12 @@ function ajax(){
       var tableData="";
     for(var i =0; i<data.length; i++){
         var currentData = data[i];
-         tableData += `<tr><td><input type="checkbox"  ${chkchk(currentData.completed)} value=${currentData.title}>${currentData.title}</td></tr>`
+         tableData += `<tr><td><input type="checkbox"  ${checkboxx(currentData.completed)} value=${currentData.title}>${currentData.title}</td></tr>`
     }
       document.getElementById("myTable").innerHTML=tableData;
      };
      };  
-     function chkchk(val){
+     function checkboxx(val){
 console.log(val)  ;
 if(val){return "disabled"} else {return null ;}
 }
