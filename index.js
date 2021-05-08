@@ -32,17 +32,16 @@ function ajax(){
       var data= JSON.parse(this.responseText);
       console.log(this.responseText)
       var tableData="";
-      for(var i =0; i<data.length; i++){
-        for(var i =0; i<data.length; i++){
+     for(var i =0; i<data.length; i++){
         var currentData = data[i];
-         tableData += `<tr><td class="tbln"><input type="checkbox"  ${chkchk(currentData.completed)} value=${currentData.title}>${currentData.title}</td></tr>`
+         tableData += `<tr><td><input type="checkbox"  ${checkBoxx(currentData.completed)} value=${currentData.title}>${currentData.title}</td></tr>`
     };
       document.getElementById("myTable").innerHTML=tableData;
      };
-     };  
-     function chkchk(val){
-console.log(val)  ;
-if(val==true){return "disabled"} else {return null ;}
+     }; 
+     function checkBoxx(value1){
+console.log(value1);
+if(value1==true){return "disabled"} else {return null};
 };
     var count =0;
      $('body').on('change','input[type=checkbox]',function(e){
