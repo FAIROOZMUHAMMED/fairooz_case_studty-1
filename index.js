@@ -34,8 +34,8 @@ function ajax(){
       var tableData="";
     for(var i =0; i<data.length; i++){
         var currentData = data[i];
-         tableData += `<tr><td><input type="checkbox"  ${checkboxx(currentData.completed)} value=${currentData.title}>${currentData.title}</td></tr>`
-    };
+          tableData += `<tr><td></td><td><input type="checkbox"  ${checkboxx(currentData.completed)} ></td><td> ${currentData.title}</td></tr>`
+       };
       document.getElementById("myTable").innerHTML=tableData;
      };
      };  
